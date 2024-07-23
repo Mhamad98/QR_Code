@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced QR Code Generator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="wrapper">
+            <div class="form">
+                <h1>QR Code Generator</h1>
+                <input type="text" placeholder="Enter text to generate QR code">
+                <div class="size-select">
+                    <label for="size">Size:</label>
+                    <select id="size">
+                        <option value="100x100">100x100</option>
+                        <option value="200x200" selected>200x200</option>
+                        <option value="300x300">300x300</option>
+                        <option value="400x400">400x400</option>
+                    </select>
+                </div>
+                <div class="color-select">
+                    <label for="color">Color:</label>
+                    <input type="color" id="color" value="#000000">
+                </div>
+                <div class="ec-level-select">
+                    <label for="ec-level">Error Correction Level:</label>
+                    <select id="ec-level">
+                        <option value="L">Low (7%)</option>
+                        <option value="M" selected>Medium (15%)</option>
+                        <option value="Q">Quartile (25%)</option>
+                        <option value="H">High (30%)</option>
+                    </select>
+                </div>
+                <button>Generate QR Code</button>
+            </div>
+            <div class="qr-code">
+                <img src="" alt="QR Code">
+            </div>
+            <div class="loading">
+                <div class="spinner"></div>
+            </div>
+            <div class="history">
+                <h2>History</h2>
+                <ul id="history-list"></ul>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
